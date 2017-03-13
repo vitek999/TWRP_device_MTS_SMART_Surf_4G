@@ -107,7 +107,8 @@ BOARD_SEPOLICY_UNION := \
 
 TARGET_RECOVERY_FSTAB := device/MTS/SMART_Surf_4G/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
-TW_THEME := portrait_hdpi
+# TW_THEME := portrait_hdpi
+TW_CUSTOM_THEME := device/MTS/SMART_Surf_4G/twrp-theme/fichl_cyan
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_DEFAULT_LANGUAGE := ru
 TW_DEVICE_VERSION := 0 by hyperion70

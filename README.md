@@ -24,4 +24,4 @@ Camera  | 5MPx + 2MPx, LED Flash
 	$ make clean
 	$ make recoveryimage 
 
-
+Thanks @fichl for twrp theme pack
