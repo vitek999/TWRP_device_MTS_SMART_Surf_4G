@@ -8,7 +8,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := SMART_Surf_4G
-PRODUCT_NAME := cm_SMART_Surf_4G
+PRODUCT_NAME := lineage_SMART_Surf_4G
 PRODUCT_BRAND := MTS
 PRODUCT_MODEL := SMART_Surf_4G
 PRODUCT_MANUFACTURER := MTS
