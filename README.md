@@ -13,8 +13,8 @@ Camera  | 5MPx + 2MPx, LED Flash
 
 =================================
 
-Для сборки recovery TWRP 3.1.x.x в исходниках СМ 
-заменить bootable/recovery на соответствующую из omirom
+Для сборки recovery TWRP 3.1.x.x в исходниках СМ заменить bootable/recovery на соответствующую из omirom
+To recovery  build in the Lineage OS sources, you need a busybox-7.1 (https://github.com/omnirom/android_external_busybox/tree/android-7.1)
 
 	$ cd $(LOCAL_DIR)/device/MTS/SMART_Surf_4G
 	$ . apply-patch.sh
