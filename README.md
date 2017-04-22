@@ -7,21 +7,32 @@ GPU     | Mali-T720
 Memory  | 1GB RAM
 Shipped Android Version | 5.1
 Storage | 8GB
-Battery | 1800 mAh
+Battery | 1900 mAh
 Display | 5.0" 1280 x 720 px
 Camera  | 5MPx + 2MPx, LED Flash
 
 =================================
 
-Для сборки recovery TWRP 3.1.x.x в исходниках СМ заменить bootable/recovery на соответствующую из omirom.
-To recovery  build in the Lineage OS sources, you need a busybox-7.1 (https://github.com/omnirom/android_external_busybox/tree/android-7.1)
+To recovery build in the Lineage OS 14.1 sources
 
-	$ cd $(LOCAL_DIR)/device/MTS/SMART_Surf_4G
-	$ . apply-patch.sh
+	$ cd $(SOURCE)/bootable
+    $ rm -rf recovery
+    $ git clone https://github.com/omnirom/android_bootable_recovery
+    $ mv -i android_bootable_recovery recovery
+    $ cd recovery
+    $ git apply -v ../../device/MTS/SMART_Surf_4G/01-twrp_recovery_mtk.patch
+    $ cd ../..
 
-	$ export WITH_SU=true
+	$ . build/envsetup.sh
     $ breakfast SMART_Surf_4G
 	$ make clean
-	$ make recoveryimage 
+	$ make recoveryimage
 
-Thanks @fichl for twrp theme pack
+## Thanks to:
+ * @blastagator
+ * @DeckerSU
+ * @olegsvs
+ * @ariafan
+ * @DeepFlex
+ * @Zormax
+
