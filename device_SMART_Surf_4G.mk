@@ -22,8 +22,12 @@
 
 LOCAL_PATH := device/MTS/SMART_Surf_4G
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+#
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
+
+# Enable SuperSU
+WITH_SU := true
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -34,5 +38,7 @@ endif
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/kernel:kernel
 
-# Time Zone data for Recovery
-PRODUCT_COPY_FILES += bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+PRODUCT_LOCALES := ru_RU en_US
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
