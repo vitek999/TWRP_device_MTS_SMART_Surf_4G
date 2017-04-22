@@ -23,8 +23,8 @@
 LOCAL_PATH := device/MTS/SMART_Surf_4G
 
 #
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
-# $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
 
 # Enable SuperSU
 WITH_SU := true
@@ -38,7 +38,9 @@ endif
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/kernel:kernel
 
-PRODUCT_LOCALES := ru_RU en_US
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+PRODUCT_LOCALES := en_US ru_RU
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
