@@ -17,8 +17,7 @@ To recovery build in the Lineage OS 14.1 sources
 
 	$ cd $(SOURCE)/bootable
     $ rm -rf recovery
-    $ git clone https://github.com/omnirom/android_bootable_recovery
-    $ mv -i android_bootable_recovery recovery
+    $ git clone https://github.com/omnirom/android_bootable_recovery recovery
     $ cd recovery
     $ git apply -v ../../device/MTS/SMART_Surf_4G/01-twrp_recovery_mtk.patch
     $ cd ../..
